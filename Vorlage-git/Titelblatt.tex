@@ -1,0 +1,136 @@
+\documentclass[
+    toc=bibliographynumbered,
+    DIV=13,
+    12pt,
+    twoside=false,]{article}
+
+
+\usepackage[utf8]{inputenc}     
+\usepackage[T1]{fontenc}        
+\usepackage[ngerman]{babel}  
+\usepackage{fontspec}   
+\usepackage{geometry}   
+\usepackage{titlesec}  
+\usepackage{setspace}
+\usepackage{fancyhdr} 
+\usepackage{lipsum}
+\usepackage{wrapfig}
+\usepackage{csquotes}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage[font=it]{caption}
+\usepackage{float}
+\setlength{\parindent}{0pt}
+\usepackage[backend=biber, style=phys, biblabel=brackets, block=ragged, language=autobib, autolang=other]{biblatex}
+\addbibresource{literatur.bib}
+%\usepackage{hyperref}
+
+
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\thispagestyle{empty}
+\fancyhead[L]{Gruppe 04}
+\fancyhead[C]{\Versuchnummer {} \Versuch}
+\fancyhead[R]{\Abgabedatum}
+
+\geometry{left=3cm, right=3cm, top=3cm, bottom=3cm}
+
+\usepackage{xcolor}             
+\usepackage{graphicx}           
+
+
+\usepackage{ragged2e}         
+\RaggedRight
+
+
+\newcommand{\Versuchnummer}{W10}                           %CHange iiit
+\newcommand{\Versuch}{Wärmeleitung}          %Change iiit
+\newcommand{\Abgabedatum}{16.11.2025}                           %Change iiit
+\newcommand{\Versuchsdatum}{05.11.2025}              %Change iiit
+
+
+
+
+
+
+\newcommand{\sectionstyle}[1]{\color{teal!40!gray}\bfseries\Huge #1}         
+\newcommand{\subsectionstyle}[1]{\color{teal!40!gray}\bfseries\LARGE #1}
+\newcommand{\subsubsectionstyle}[1]{\color{teal!40!gray}\bfseries\Large #1}
+\titleformat{\section}{\sectionstyle}{\thesection}{1em}{}
+\titleformat{\subsection}{\subsectionstyle}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\subsubsectionstyle}{\thesubsubsection}{1em}{}
+
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+
+
+
+\begin{titlepage}
+    
+    {\color{teal!40!gray}\fontsize{50}{30}\selectfont\bfseries Physikalisches\\ Anfängerpraktikum}\\
+    \vspace{0,5cm}
+    {\LARGE {\textbf {Universität Augsburg\\Wintersemester 2025/26}}\par}
+    \vspace{3cm}
+    
+
+   {\LARGE \textbf {Versuch: {}\Versuchnummer {} \Versuch  }}\\ 
+   \vspace{1cm}
+
+
+     \begin{minipage}{0.7\textwidth}
+        {\large \setstretch{2}{Gruppe: \hspace{2,8cm} G 04}}\\ \vspace{0,3cm}   
+    {\large \setstretch{2}{Versuchsdatum: \hspace{1,55cm}\Versuchsdatum}}\\\vspace{0,3cm}
+     {\large \setstretch{2}{Abgabedatum: \hspace{1,8cm}\Abgabedatum}}\\\vspace{1,5cm}
+    {\large \setstretch{2}{Gemeinsames Versuchsprotokoll}}\\
+     {\large \setstretch{2}{Ferdinand Frey\\Tom Glaser}}
+
+  \end{minipage}
+     \begin{minipage}{0.5\textwidth}
+            \includegraphics[width =\linewidth]{Bilder/Logo.jpg}
+    \end{minipage}\hfill
+     
+
+
+
+
+\vspace{2cm}
+\begin{center}
+\includegraphics[width=0.8\textwidth, height = 4cm, scale=3.0]{Bilder/Titelbild.png}   %Bild ändern
+\end{center}      
+    \vfill
+\end{titlepage}
+\setcounter{page}{2}
+
+
+\pagestyle{fancy}
+\markboth{INHALTSVERZEICHNIS}{}
+\tableofcontents
+\newpage
+
+\pagestyle{fancy}
+\input{Einleitung}
+\newpage
+\input{Theorie}
+\newpage
+\input{Versuchsbeschreibung}
+\newpage
+\input{AuswertungundDiskussion}
+\newpage
+\input{Zusammenfassung}
+\newpage
+\input{Laborbuch(Anhang)}
+\newpage
+\input{Literaturverzeichnis}
+
+
+
+\end{document}
